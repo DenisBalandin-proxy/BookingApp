@@ -80,7 +80,8 @@ struct BookingView: View {
                         ForEach(0...tourists.count - 1, id: \.self) { number in
                             TouristInfoView(
                                 checkValidation: $checkValidation,
-                                tourist: $tourists[number]
+                                tourist: $tourists[number],
+                                numberOfTourist: numberOfTourist[number]
                             )
                             .background(.white)
                             .clipShape(
